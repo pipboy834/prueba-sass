@@ -1,0 +1,55 @@
+
+@mixin size-boton ($w, $h, $ta) {
+    width: $w;
+    height: $h;
+    text-align: $ta;
+    
+}
+$titulos: (
+    h1:5em,
+    h2:3em,
+    h3:2em,
+    h4:1.5em,
+    h5:0.75em,
+);
+$h1: map-get($titulos , h1 );
+$h2:map-get($titulos, h2 );
+
+%headings{
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+}
+
+.btn{
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: antiquewhite;
+    padding: 50px;
+    @include size-boton(400px, 150px, center)
+
+}
+.div{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    background-color: aqua;
+}
+.h1{
+    text-align: center;
+    font-size: $h1;
+    @extend %titulars;
+}
+.h2{
+    text-align: right;
+    font-size: $h2;
+    @extend %titulars;
+}
+
+
+%titulars{
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aqua;
+}
